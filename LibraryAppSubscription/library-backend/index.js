@@ -19,10 +19,10 @@ const { PubSub } = require("graphql-subscriptions")
 
 const pubsub = new PubSub()
 
-const JWT_SECRET = "APOLLO"
+const JWT_SECRET = "..."
 
 const MONGODB_URI =
-  "mongodb://fullstack:josedavid2018@react-apps-cluster-shard-00-00.3ms5g.mongodb.net:27017,react-apps-cluster-shard-00-01.3ms5g.mongodb.net:27017,react-apps-cluster-shard-00-02.3ms5g.mongodb.net:27017/library?ssl=true&replicaSet=atlas-p9dl6q-shard-0&authSource=admin&retryWrites=true&w=majority"
+  "..."
 
 console.log("connecting to", MONGODB_URI)
 
