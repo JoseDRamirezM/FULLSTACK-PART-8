@@ -57,6 +57,16 @@ const App = () => {
         data: { allAuthors: dataInStore.allAuthors.concat(addedBook.author) },
       })
     }
+    const updatedAuthors = dataInStore.allAuthors.map((author) => {
+      if (author.name === addedBook.author.name) {
+        return addedBook.author
+      }
+      return author
+    })
+    client.writeQuery({
+      query: ALL_AUTHORS,
+      data: { allAuthors: updatedAuthors },
+    })
   }
 
   useSubscription(BOOK_ADDED, {
